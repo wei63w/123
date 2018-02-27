@@ -521,7 +521,27 @@
         
         
         
-        
+        <a class="livechat-girl js-livechat-girl animated" id="lc-girl-block-en_2" href="http://wpa.qq.com/msgrd?v=3&amp;uin=782385854&amp;site=qq&amp;menu=yes" target="_blank">
+
+            <img class="girl" border="0" src="img/qqkfh.png" alt="点击这里给我发消息" title="点击这里给我发消息">
+
+            <div class="js-livechat-hint livechat-hint rd-notice rd-notice-tooltip single-line hide_hint">
+
+                <div class="popover-content rd-notice-content">嘿！有问题找我哦</div>
+
+            </div>
+
+            <div class="animated-circles js-animated-circles">
+
+                <div class="circle c-1"></div>
+
+                <div class="circle c-2"></div>
+
+                <div class="circle c-3"></div>
+
+            </div>
+
+        </a>
         
         
         
@@ -623,6 +643,24 @@ $(function(){
             }  
         }  
     }); 
+    
+    
+    setInterval(function(){
+    	  if($('.animated-circles').hasClass('animated')){
+    	  	$('.animated-circles').removeClass('animated')
+    	  	console.log('addclass')
+    	  }else{
+    	  	$('.animated-circles').addClass('animated')
+    	  	console.log('removeClass')
+    	  }
+    },1500)
+    
+    $("#lc-girl-block-en_2").hover(function(){
+    		$(".js-livechat-hint").addClass('show_hint').removeClass('hide_hint');
+	},function(){
+		$(".js-livechat-hint").addClass('hide_hint').removeClass('show_hint');
+	});
+	
 })
 </script>
 </html>
